@@ -1,0 +1,8 @@
+# Experimento 3b - demorar=true com functionTimeout = 00:00:10 (host.json alterado e host reiniciado)
+# 26/11/2026 16:13:35
+$ grep functionTimeout host.json
+  "functionTimeout": "00:00:10",
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-003","demorar":true}'
+{"guia":"G-R-003","hospital":null,"bolsas":[],"invocacaoNesteAmbiente":1,"ambienteInicializadoEm":"2026-11-26T19:13:31.901Z"}
+[HTTP 201] tempo total: 5.589834s

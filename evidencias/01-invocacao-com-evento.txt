@@ -1,0 +1,10 @@
+# Experimento 1 - invocacao com o evento events/pedido.json (host recem-iniciado = ambiente novo)
+# 26/11/2026 16:12:38
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d @events/pedido.json    # invocacao 1
+{"guia":"G-R-001","hospital":"H-Recife","bolsas":["O-NEG-0142"],"invocacaoNesteAmbiente":1,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.675759s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d @events/pedido.json    # invocacao 2
+{"guia":"G-R-001","hospital":"H-Recife","bolsas":["O-NEG-0142"],"invocacaoNesteAmbiente":2,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.224431s

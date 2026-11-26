@@ -1,0 +1,35 @@
+== func-host-fase1-timeout3s.log
+[2026-11-26T19:12:36.218Z] Worker process started and initialized.
+[2026-11-26T19:12:39.559Z] invocação 1 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:39.590Z] Executed 'Functions.guias' (Succeeded, Duration=237ms)
+[2026-11-26T19:12:39.935Z] invocação 2 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:39.936Z] Executed 'Functions.guias' (Succeeded, Duration=7ms)
+[2026-11-26T19:12:40.274Z] invocação 3 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.275Z] Executed 'Functions.guias' (Succeeded, Duration=4ms)
+[2026-11-26T19:12:40.555Z] invocação 4 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.555Z] Executed 'Functions.guias' (Succeeded, Duration=6ms)
+[2026-11-26T19:12:40.837Z] invocação 5 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.838Z] Executed 'Functions.guias' (Succeeded, Duration=8ms)
+[2026-11-26T19:12:41.112Z] invocação 6 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 400
+[2026-11-26T19:12:41.113Z] Executed 'Functions.guias' (Succeeded, Duration=5ms)
+[2026-11-26T19:12:44.442Z] Timeout value of 00:00:03 exceeded by function 'Functions.guias' (Id: 'a99c0157-9771-47b1-a2fc-aa7e2d57fd03'). Initiating cancellation.
+[2026-11-26T19:12:44.452Z] Executed 'Functions.guias' (Failed, Duration=3016ms)
+[2026-11-26T19:12:44.452Z] Microsoft.Azure.WebJobs.Host: Timeout value of 00:00:03 was exceeded by function: Functions.guias.
+[2026-11-26T19:12:46.444Z] invocação 7 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:13:01.844Z] invocação 8 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:13:01.845Z] Executed 'Functions.guias' (Succeeded, Duration=10ms)
+
+== func-host-fase2-ambiente-novo.log
+[2026-11-26T19:13:14.903Z] Worker process started and initialized.
+[2026-11-26T19:13:18.733Z] invocação 1 neste ambiente (inicializado em 2026-11-26T19:13:14.234Z) -> 201
+[2026-11-26T19:13:18.760Z] Executed 'Functions.guias' (Succeeded, Duration=219ms)
+[2026-11-26T19:13:19.058Z] invocação 2 neste ambiente (inicializado em 2026-11-26T19:13:14.234Z) -> 201
+[2026-11-26T19:13:19.059Z] Executed 'Functions.guias' (Succeeded, Duration=7ms)
+[2026-11-26T19:13:19.337Z] invocação 3 neste ambiente (inicializado em 2026-11-26T19:13:14.234Z) -> 201
+[2026-11-26T19:13:19.337Z] Executed 'Functions.guias' (Succeeded, Duration=6ms)
+
+== func-host-fase3-timeout10s.log
+[2026-11-26T19:13:32.746Z] Worker process started and initialized.
+[2026-11-26T19:13:41.586Z] invocação 1 neste ambiente (inicializado em 2026-11-26T19:13:31.901Z) -> 201
+[2026-11-26T19:13:41.627Z] Executed 'Functions.guias' (Succeeded, Duration=5211ms)
+

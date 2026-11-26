@@ -1,0 +1,45 @@
+# Saída do terminal durante a gravação do vídeo (bash demo.sh) - 26/11/2026
+
+$ bash demo.sh
+Rota Vital - funcao serverless que gera a guia de transporte
+Azure Functions rodando localmente (Core Tools), sem Docker
+
+>>> 0) Limite de tempo da funcao (host.json)
+$ grep functionTimeout host.json
+  "functionTimeout": "00:00:03",
+
+>>> 1) Subindo a funcao (npx func start)
+    guias: [POST] http://localhost:7071/api/guias
+
+>>> 2) Invocacao com o evento events/pedido.json - 2 vezes
+$ cat events/pedido.json
+{"requisicaoId":"R-001","hospital":"H-Recife","bolsas":["O-NEG-0142"]}
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d @events/pedido.json      # invocacao 1
+{"guia":"G-R-001","hospital":"H-Recife","bolsas":["O-NEG-0142"],"invocacaoNesteAmbiente":1,"ambienteInicializadoEm":"2026-11-26T20:11:04.662Z"}
+[HTTP 201] tempo: 1.185704s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d @events/pedido.json      # invocacao 2
+{"guia":"G-R-001","hospital":"H-Recife","bolsas":["O-NEG-0142"],"invocacaoNesteAmbiente":2,"ambienteInicializadoEm":"2026-11-26T20:11:04.662Z"}
+[HTTP 201] tempo: 0.242604s
+
+>>> 3) Gatilho HTTP - 3 chamadas no MESMO ambiente
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":3,"ambienteInicializadoEm":"2026-11-26T20:11:04.662Z"}
+[HTTP 201]
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":4,"ambienteInicializadoEm":"2026-11-26T20:11:04.662Z"}
+[HTTP 201]
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":5,"ambienteInicializadoEm":"2026-11-26T20:11:04.662Z"}
+[HTTP 201]
+
+>>> 4) Reiniciando o host = ambiente NOVO
+    guias: [POST] http://localhost:7071/api/guias
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":1,"ambienteInicializadoEm":"2026-11-26T20:11:58.792Z"}
+[HTTP 201]
+
+>>> 5) Tempo limite: demorar=true (dorme 5 s, limite de 3 s)
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-003","demorar":true}'
+[HTTP 500]
+Log do host:
+[2026-11-26T20:12:15.260Z] Timeout value of 00:00:03 exceeded by function 'Functions.guias'. Initiating cancellation.
+[2026-11-26T20:12:15.282Z] Executed 'Functions.guias' (Failed, Duration=3036ms)
+[2026-11-26T20:12:15.283Z] Microsoft.Azure.WebJobs.Host: Timeout value of 00:00:03 was exceeded by function: Functions.guias.

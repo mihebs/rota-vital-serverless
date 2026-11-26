@@ -1,0 +1,507 @@
+
+
+Azure Functions Core Tools
+Core Tools Version:       4.17.0+fec3d82b386c4e84ecb615cf165effabb3841859 (64-bit)
+Function Runtime Version: 4.1055.300.26527
+
+[2026-11-26T19:12:32.930Z] Building host: version spec: , startup suppressed: 'False', configuration suppressed: 'False', startup operation id: 'e03eb38b-14d6-4d6b-9b25-9cef0367bc4e'
+[2026-11-26T19:12:32.942Z] Reading host configuration file 'C:\Users\mirellasantana\rota-vital-serverless\host.json'
+[2026-11-26T19:12:32.943Z] Host configuration file read:
+[2026-11-26T19:12:32.943Z] {
+[2026-11-26T19:12:32.943Z]   "version": "2.0",
+[2026-11-26T19:12:32.944Z]   "functionTimeout": "00:00:03",
+[2026-11-26T19:12:32.944Z]   "logging": {
+[2026-11-26T19:12:32.944Z]     "logLevel": {
+[2026-11-26T19:12:32.944Z]       "default": "Information"
+[2026-11-26T19:12:32.944Z]     }
+[2026-11-26T19:12:32.944Z]   },
+[2026-11-26T19:12:32.945Z]   "extensionBundle": {
+[2026-11-26T19:12:32.945Z]     "id": "Microsoft.Azure.Functions.ExtensionBundle",
+[2026-11-26T19:12:32.945Z]     "version": "[4.*, 5.0.0)"
+[2026-11-26T19:12:32.945Z]   }
+[2026-11-26T19:12:32.945Z] }
+[2026-11-26T19:12:32.977Z] Looking for extension bundle Microsoft.Azure.Functions.ExtensionBundle at C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle
+[2026-11-26T19:12:32.978Z] Applying platform release channel configuration LATEST. Bundle version 4.41.2 will be used
+[2026-11-26T19:12:32.979Z] Found a matching extension bundle at C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle\4.41.2
+[2026-11-26T19:12:33.047Z] Loading functions metadata
+[2026-11-26T19:12:33.050Z] Worker indexing is enabled
+[2026-11-26T19:12:33.052Z] Fetching metadata for workerRuntime: node
+[2026-11-26T19:12:33.053Z] Reading functions metadata (Worker)
+[2026-11-26T19:12:33.287Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 connecting to 127.0.0.1:58600 via http:
+[2026-11-26T19:12:35.533Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received WorkerInitRequest
+[2026-11-26T19:12:35.572Z] Loading entry point file "src/functions/guias.js"
+[2026-11-26T19:12:35.573Z] Setting Node.js programming model to "@azure/functions" version "4.17.1"
+[2026-11-26T19:12:35.573Z] Loaded entry point file "src/functions/guias.js"
+[2026-11-26T19:12:35.573Z] Node.js v22 will reach EOL on 2027-04. Consider upgrading: https://aka.ms/functions-nodejs-supported-versions
+[2026-11-26T19:12:35.709Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionsMetadataRequest
+[2026-11-26T19:12:35.756Z] 1 functions found (Worker)
+[2026-11-26T19:12:35.765Z] 1 functions loaded
+[2026-11-26T19:12:35.771Z] Looking for extension bundle Microsoft.Azure.Functions.ExtensionBundle at C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle
+[2026-11-26T19:12:35.773Z] Applying platform release channel configuration LATEST. Bundle version 4.41.2 will be used
+[2026-11-26T19:12:35.773Z] Found a matching extension bundle at C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle\4.41.2
+[2026-11-26T19:12:35.773Z] Loading extension bundle from C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle\4.41.2\bin
+[2026-11-26T19:12:35.774Z] Script Startup resetting load context with base path: 'C:\Users\mirellasantana\.azure-functions-core-tools\Functions\ExtensionBundles\Microsoft.Azure.Functions.ExtensionBundle\4.41.2\bin'.
+[2026-11-26T19:12:35.794Z] Reading host configuration file 'C:\Users\mirellasantana\rota-vital-serverless\host.json'
+[2026-11-26T19:12:35.794Z] Host configuration file read:
+[2026-11-26T19:12:35.794Z] {
+[2026-11-26T19:12:35.794Z]   "version": "2.0",
+[2026-11-26T19:12:35.794Z]   "functionTimeout": "00:00:03",
+[2026-11-26T19:12:35.794Z]   "logging": {
+[2026-11-26T19:12:35.794Z]     "logLevel": {
+[2026-11-26T19:12:35.794Z]       "default": "Information"
+[2026-11-26T19:12:35.795Z]     }
+[2026-11-26T19:12:35.795Z]   },
+[2026-11-26T19:12:35.795Z]   "extensionBundle": {
+[2026-11-26T19:12:35.795Z]     "id": "Microsoft.Azure.Functions.ExtensionBundle",
+[2026-11-26T19:12:35.795Z]     "version": "[4.*, 5.0.0)"
+[2026-11-26T19:12:35.795Z]   }
+[2026-11-26T19:12:35.795Z] }
+[2026-11-26T19:12:35.874Z] Starting host metrics provider.
+[2026-11-26T19:12:36.007Z] Initializing Warmup Extension.
+[2026-11-26T19:12:36.069Z] Initializing Host. OperationId: 'e03eb38b-14d6-4d6b-9b25-9cef0367bc4e'.
+[2026-11-26T19:12:36.077Z] Host initialization: ConsecutiveErrors=0, StartupCount=1, OperationId=e03eb38b-14d6-4d6b-9b25-9cef0367bc4e
+[2026-11-26T19:12:36.122Z] ScriptJobHostOptions
+[2026-11-26T19:12:36.123Z] {
+[2026-11-26T19:12:36.123Z]   "FileWatchingEnabled": true,
+[2026-11-26T19:12:36.123Z]   "FileLoggingMode": "DebugOnly",
+[2026-11-26T19:12:36.123Z]   "FunctionTimeout": "00:00:03",
+[2026-11-26T19:12:36.123Z]   "TelemetryMode": "ApplicationInsights"
+[2026-11-26T19:12:36.123Z] }
+[2026-11-26T19:12:36.123Z] LoggerFilterOptions
+[2026-11-26T19:12:36.123Z] {
+[2026-11-26T19:12:36.123Z]   "MinLevel": "None",
+[2026-11-26T19:12:36.123Z]   "Rules": [
+[2026-11-26T19:12:36.123Z]     {
+[2026-11-26T19:12:36.124Z]       "ProviderName": null,
+[2026-11-26T19:12:36.124Z]       "CategoryName": "Microsoft.Hosting.Lifetime",
+[2026-11-26T19:12:36.124Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.124Z]       "Filter": null
+[2026-11-26T19:12:36.124Z]     },
+[2026-11-26T19:12:36.124Z]     {
+[2026-11-26T19:12:36.124Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.124Z]       "CategoryName": null,
+[2026-11-26T19:12:36.124Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.124Z]       "Filter": null
+[2026-11-26T19:12:36.124Z]     },
+[2026-11-26T19:12:36.124Z]     {
+[2026-11-26T19:12:36.124Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.124Z]       "CategoryName": null,
+[2026-11-26T19:12:36.125Z]       "LogLevel": null,
+[2026-11-26T19:12:36.125Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.125Z]     },
+[2026-11-26T19:12:36.125Z]     {
+[2026-11-26T19:12:36.125Z]       "ProviderName": null,
+[2026-11-26T19:12:36.125Z]       "CategoryName": null,
+[2026-11-26T19:12:36.125Z]       "LogLevel": null,
+[2026-11-26T19:12:36.125Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.125Z]     },
+[2026-11-26T19:12:36.125Z]     {
+[2026-11-26T19:12:36.125Z]       "ProviderName": null,
+[2026-11-26T19:12:36.125Z]       "CategoryName": null,
+[2026-11-26T19:12:36.125Z]       "LogLevel": null,
+[2026-11-26T19:12:36.125Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.126Z]     },
+[2026-11-26T19:12:36.126Z]     {
+[2026-11-26T19:12:36.126Z]       "ProviderName": null,
+[2026-11-26T19:12:36.126Z]       "CategoryName": "Function",
+[2026-11-26T19:12:36.126Z]       "LogLevel": "Information",
+[2026-11-26T19:12:36.126Z]       "Filter": null
+[2026-11-26T19:12:36.126Z]     },
+[2026-11-26T19:12:36.126Z]     {
+[2026-11-26T19:12:36.126Z]       "ProviderName": null,
+[2026-11-26T19:12:36.126Z]       "CategoryName": null,
+[2026-11-26T19:12:36.126Z]       "LogLevel": "Information",
+[2026-11-26T19:12:36.126Z]       "Filter": null
+[2026-11-26T19:12:36.126Z]     },
+[2026-11-26T19:12:36.126Z]     {
+[2026-11-26T19:12:36.127Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2026-11-26T19:12:36.127Z]       "CategoryName": null,
+[2026-11-26T19:12:36.127Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.127Z]       "Filter": null
+[2026-11-26T19:12:36.127Z]     },
+[2026-11-26T19:12:36.127Z]     {
+[2026-11-26T19:12:36.127Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2026-11-26T19:12:36.127Z]       "CategoryName": null,
+[2026-11-26T19:12:36.127Z]       "LogLevel": null,
+[2026-11-26T19:12:36.127Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.127Z]     },
+[2026-11-26T19:12:36.127Z]     {
+[2026-11-26T19:12:36.127Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.128Z]       "CategoryName": null,
+[2026-11-26T19:12:36.128Z]       "LogLevel": null,
+[2026-11-26T19:12:36.128Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.128Z]     }
+[2026-11-26T19:12:36.128Z]   ]
+[2026-11-26T19:12:36.128Z] }
+[2026-11-26T19:12:36.128Z] LoggerFilterOptions
+[2026-11-26T19:12:36.128Z] {
+[2026-11-26T19:12:36.128Z]   "MinLevel": "None",
+[2026-11-26T19:12:36.128Z]   "Rules": [
+[2026-11-26T19:12:36.128Z]     {
+[2026-11-26T19:12:36.129Z]       "ProviderName": null,
+[2026-11-26T19:12:36.129Z]       "CategoryName": "Microsoft.Hosting.Lifetime",
+[2026-11-26T19:12:36.129Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.129Z]       "Filter": null
+[2026-11-26T19:12:36.129Z]     },
+[2026-11-26T19:12:36.129Z]     {
+[2026-11-26T19:12:36.129Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.129Z]       "CategoryName": null,
+[2026-11-26T19:12:36.129Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.129Z]       "Filter": null
+[2026-11-26T19:12:36.129Z]     },
+[2026-11-26T19:12:36.129Z]     {
+[2026-11-26T19:12:36.129Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.129Z]       "CategoryName": null,
+[2026-11-26T19:12:36.130Z]       "LogLevel": null,
+[2026-11-26T19:12:36.130Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.130Z]     },
+[2026-11-26T19:12:36.130Z]     {
+[2026-11-26T19:12:36.130Z]       "ProviderName": null,
+[2026-11-26T19:12:36.130Z]       "CategoryName": null,
+[2026-11-26T19:12:36.130Z]       "LogLevel": null,
+[2026-11-26T19:12:36.130Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.130Z]     },
+[2026-11-26T19:12:36.130Z]     {
+[2026-11-26T19:12:36.130Z]       "ProviderName": null,
+[2026-11-26T19:12:36.130Z]       "CategoryName": null,
+[2026-11-26T19:12:36.130Z]       "LogLevel": null,
+[2026-11-26T19:12:36.131Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.131Z]     },
+[2026-11-26T19:12:36.131Z]     {
+[2026-11-26T19:12:36.131Z]       "ProviderName": null,
+[2026-11-26T19:12:36.131Z]       "CategoryName": "Function",
+[2026-11-26T19:12:36.131Z]       "LogLevel": "Information",
+[2026-11-26T19:12:36.131Z]       "Filter": null
+[2026-11-26T19:12:36.131Z]     },
+[2026-11-26T19:12:36.131Z]     {
+[2026-11-26T19:12:36.131Z]       "ProviderName": null,
+[2026-11-26T19:12:36.131Z]       "CategoryName": null,
+[2026-11-26T19:12:36.131Z]       "LogLevel": "Information",
+[2026-11-26T19:12:36.131Z]       "Filter": null
+[2026-11-26T19:12:36.131Z]     },
+[2026-11-26T19:12:36.132Z]     {
+[2026-11-26T19:12:36.132Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2026-11-26T19:12:36.132Z]       "CategoryName": null,
+[2026-11-26T19:12:36.132Z]       "LogLevel": "None",
+[2026-11-26T19:12:36.132Z]       "Filter": null
+[2026-11-26T19:12:36.132Z]     },
+[2026-11-26T19:12:36.132Z]     {
+[2026-11-26T19:12:36.132Z]       "ProviderName": "Microsoft.Azure.WebJobs.Script.WebHost.Diagnostics.SystemLoggerProvider",
+[2026-11-26T19:12:36.132Z]       "CategoryName": null,
+[2026-11-26T19:12:36.132Z]       "LogLevel": null,
+[2026-11-26T19:12:36.132Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.132Z]     },
+[2026-11-26T19:12:36.132Z]     {
+[2026-11-26T19:12:36.133Z]       "ProviderName": "Azure.Functions.Cli.Diagnostics.ColoredConsoleLoggerProvider",
+[2026-11-26T19:12:36.133Z]       "CategoryName": null,
+[2026-11-26T19:12:36.133Z]       "LogLevel": null,
+[2026-11-26T19:12:36.133Z]       "Filter": "<AddFilter>b__0"
+[2026-11-26T19:12:36.133Z]     }
+[2026-11-26T19:12:36.133Z]   ]
+[2026-11-26T19:12:36.133Z] }
+[2026-11-26T19:12:36.133Z] HttpWorkerOptions
+[2026-11-26T19:12:36.133Z] {
+[2026-11-26T19:12:36.133Z]   "Type": 0,
+[2026-11-26T19:12:36.133Z]   "Description": null,
+[2026-11-26T19:12:36.133Z]   "Arguments": null,
+[2026-11-26T19:12:36.134Z]   "Port": 58602,
+[2026-11-26T19:12:36.134Z]   "IsPortManuallySet": false,
+[2026-11-26T19:12:36.134Z]   "EnableForwardingHttpRequest": false,
+[2026-11-26T19:12:36.134Z]   "EnableProxyingHttpRequest": false,
+[2026-11-26T19:12:36.134Z]   "InitializationTimeout": "00:00:30",
+[2026-11-26T19:12:36.134Z]   "CustomRoutesEnabled": false,
+[2026-11-26T19:12:36.134Z]   "Http": null
+[2026-11-26T19:12:36.134Z] }
+[2026-11-26T19:12:36.134Z] ScriptJobHostOptions
+[2026-11-26T19:12:36.134Z] {
+[2026-11-26T19:12:36.134Z]   "FileWatchingEnabled": true,
+[2026-11-26T19:12:36.134Z]   "FileLoggingMode": "DebugOnly",
+[2026-11-26T19:12:36.134Z]   "FunctionTimeout": "00:00:03",
+[2026-11-26T19:12:36.135Z]   "TelemetryMode": "ApplicationInsights"
+[2026-11-26T19:12:36.135Z] }
+[2026-11-26T19:12:36.135Z] FunctionResultAggregatorOptions
+[2026-11-26T19:12:36.135Z] {
+[2026-11-26T19:12:36.135Z]   "BatchSize": 1000,
+[2026-11-26T19:12:36.135Z]   "FlushTimeout": "00:00:30",
+[2026-11-26T19:12:36.135Z]   "IsEnabled": true
+[2026-11-26T19:12:36.135Z] }
+[2026-11-26T19:12:36.136Z] ConcurrencyOptions
+[2026-11-26T19:12:36.136Z] {
+[2026-11-26T19:12:36.136Z]   "DynamicConcurrencyEnabled": false,
+[2026-11-26T19:12:36.136Z]   "MaximumFunctionConcurrency": 500,
+[2026-11-26T19:12:36.136Z]   "CPUThreshold": 0.8,
+[2026-11-26T19:12:36.136Z]   "SnapshotPersistenceEnabled": true
+[2026-11-26T19:12:36.136Z] }
+[2026-11-26T19:12:36.136Z] SingletonOptions
+[2026-11-26T19:12:36.136Z] {
+[2026-11-26T19:12:36.136Z]   "LockPeriod": "00:00:15",
+[2026-11-26T19:12:36.136Z]   "ListenerLockPeriod": "00:00:15",
+[2026-11-26T19:12:36.137Z]   "LockAcquisitionTimeout": "10675199.02:48:05.4775807",
+[2026-11-26T19:12:36.137Z]   "LockAcquisitionPollingInterval": "00:00:05",
+[2026-11-26T19:12:36.137Z]   "ListenerLockRecoveryPollingInterval": "00:01:00"
+[2026-11-26T19:12:36.137Z] }
+[2026-11-26T19:12:36.137Z] TimerTriggerPlatformOptions
+[2026-11-26T19:12:36.137Z] {
+[2026-11-26T19:12:36.137Z]   "NonCronScheduleBehavior": "Allow"
+[2026-11-26T19:12:36.137Z] }
+[2026-11-26T19:12:36.137Z] ScaleOptions
+[2026-11-26T19:12:36.137Z] {
+[2026-11-26T19:12:36.137Z]   "ScaleMetricsMaxAge": "00:02:00",
+[2026-11-26T19:12:36.137Z]   "ScaleMetricsSampleInterval": "00:00:10",
+[2026-11-26T19:12:36.138Z]   "MetricsPurgeEnabled": true,
+[2026-11-26T19:12:36.138Z]   "IsTargetScalingEnabled": true,
+[2026-11-26T19:12:36.138Z]   "IsRuntimeScalingEnabled": false
+[2026-11-26T19:12:36.138Z] }
+[2026-11-26T19:12:36.141Z] Starting JobHost
+[2026-11-26T19:12:36.144Z] Starting Host (HostId=gv0002-1765737324, InstanceId=45dece18-f2df-4466-a29c-1f087c47ccbe, Version=4.1055.300.26527, ProcessId=27348, AppDomainId=1, InDebugMode=False, InDiagnosticMode=False, FunctionsExtensionVersion=(null))
+[2026-11-26T19:12:36.150Z] Loading functions metadata
+[2026-11-26T19:12:36.150Z] Worker indexing is enabled
+[2026-11-26T19:12:36.150Z] Fetching metadata for workerRuntime: node
+[2026-11-26T19:12:36.150Z] Reading functions metadata (Worker)
+[2026-11-26T19:12:36.155Z] Reading functions metadata (Custom)
+[2026-11-26T19:12:36.164Z] 0 functions found (Custom)
+[2026-11-26T19:12:36.170Z] 1 functions loaded
+[2026-11-26T19:12:36.217Z] Generating 1 job function(s)
+[2026-11-26T19:12:36.218Z] Worker process started and initialized.
+[2026-11-26T19:12:36.224Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionLoadRequest
+[2026-11-26T19:12:36.264Z] Found the following functions:
+[2026-11-26T19:12:36.264Z] Host.Functions.guias
+[2026-11-26T19:12:36.264Z] 
+[2026-11-26T19:12:36.273Z] HttpOptions
+[2026-11-26T19:12:36.273Z] {
+[2026-11-26T19:12:36.273Z]   "DynamicThrottlesEnabled": false,
+[2026-11-26T19:12:36.273Z]   "EnableChunkedRequestBinding": false,
+[2026-11-26T19:12:36.273Z]   "MaxConcurrentRequests": -1,
+[2026-11-26T19:12:36.273Z]   "MaxOutstandingRequests": -1,
+[2026-11-26T19:12:36.273Z]   "RoutePrefix": "api"
+[2026-11-26T19:12:36.273Z] }
+[2026-11-26T19:12:36.274Z] Initializing function HTTP routes
+[2026-11-26T19:12:36.274Z] Mapped function route 'api/guias' [POST] to 'guias'
+[2026-11-26T19:12:36.274Z] 
+[2026-11-26T19:12:36.282Z] Host initialized (129ms)
+[2026-11-26T19:12:36.284Z] Host started (138ms)
+[2026-11-26T19:12:36.284Z] Job host started
+
+Functions:
+
+[2026-11-26T19:12:36.293Z] HttpBodyControlOptions
+[2026-11-26T19:12:36.294Z] {
+[2026-11-26T19:12:36.294Z]   "AllowSynchronousIO": false
+[2026-11-26T19:12:36.294Z] }
+[2026-11-26T19:12:36.294Z] HostHealthMonitorOptions
+[2026-11-26T19:12:36.294Z] {
+[2026-11-26T19:12:36.294Z]   "Enabled": true,
+[2026-11-26T19:12:36.294Z]   "HealthCheckInterval": "00:00:10",
+[2026-11-26T19:12:36.294Z]   "HealthCheckWindow": "00:02:00",
+[2026-11-26T19:12:36.294Z]   "CounterThreshold": 0.8
+[2026-11-26T19:12:36.295Z] }
+[2026-11-26T19:12:36.295Z] WorkerConfigurationResolverOptions
+[2026-11-26T19:12:36.295Z] {
+[2026-11-26T19:12:36.295Z]   "ReleaseChannel": null,
+[2026-11-26T19:12:36.295Z]   "WorkerRuntime": "node",
+[2026-11-26T19:12:36.295Z]   "IsPlaceholderModeEnabled": false,
+	guias: [POST] http://localhost:7071/api/guias
+
+[2026-11-26T19:12:36.295Z]   "IsMultiLanguageWorkerEnvironment": false,
+[2026-11-26T19:12:36.296Z]   "ProbingPaths": null,
+[2026-11-26T19:12:36.296Z]   "WorkersAvailableForResolution": [],
+[2026-11-26T19:12:36.296Z]   "WorkerDescriptionOverrides": {},
+[2026-11-26T19:12:36.296Z]   "IgnoredWorkerVersions": null,
+[2026-11-26T19:12:36.296Z]   "IsDynamicWorkerResolutionEnabled": false,
+[2026-11-26T19:12:36.296Z]   "WorkersRootDirPath": "C:\\Users\\mirellasantana\\rota-vital-serverless\\node_modules\\azure-functions-core-tools\\bin\\workers",
+[2026-11-26T19:12:36.296Z]   "EffectiveCoresCount": 12,
+[2026-11-26T19:12:36.296Z]   "WorkerProcessCount": null,
+[2026-11-26T19:12:36.296Z]   "FunctionsWorkerRuntimeVersion": null
+[2026-11-26T19:12:36.296Z] }
+For detailed output, run func with --verbose flag.
+[2026-11-26T19:12:36.297Z] LanguageWorkerOptions
+[2026-11-26T19:12:36.297Z] {
+[2026-11-26T19:12:36.297Z]   "WorkerConfigs": [
+[2026-11-26T19:12:36.297Z]     {
+[2026-11-26T19:12:36.297Z]       "Description": {
+[2026-11-26T19:12:36.297Z]         "Language": "node",
+[2026-11-26T19:12:36.297Z]         "DefaultRuntimeName": null,
+[2026-11-26T19:12:36.297Z]         "DefaultRuntimeVersion": null,
+[2026-11-26T19:12:36.297Z]         "SupportedArchitectures": null,
+[2026-11-26T19:12:36.297Z]         "SupportedOperatingSystems": null,
+[2026-11-26T19:12:36.297Z]         "SupportedRuntimeVersions": null,
+[2026-11-26T19:12:36.298Z]         "SanitizeRuntimeVersionRegex": null,
+[2026-11-26T19:12:36.298Z]         "WorkerIndexing": "true",
+[2026-11-26T19:12:36.298Z]         "Extensions": [
+[2026-11-26T19:12:36.298Z]           ".js",
+[2026-11-26T19:12:36.298Z]           ".mjs",
+[2026-11-26T19:12:36.298Z]           ".cjs"
+[2026-11-26T19:12:36.298Z]         ],
+[2026-11-26T19:12:36.298Z]         "UseStdErrorStreamForErrorsOnly": false,
+[2026-11-26T19:12:36.298Z]         "DefaultExecutablePath": "node",
+[2026-11-26T19:12:36.298Z]         "ExecutableWorkingDirectory": null,
+[2026-11-26T19:12:36.298Z]         "DefaultWorkerPath": "C:\\Users\\mirellasantana\\rota-vital-serverless\\node_modules\\azure-functions-core-tools\\bin\\workers\\node\\dist/src/nodejsWorker.js",
+[2026-11-26T19:12:36.298Z]         "WorkerDirectory": "C:\\Users\\mirellasantana\\rota-vital-serverless\\node_modules\\azure-functions-core-tools\\bin\\workers\\node",
+[2026-11-26T19:12:36.298Z]         "Arguments": [],
+[2026-11-26T19:12:36.299Z]         "WorkerArguments": null,
+[2026-11-26T19:12:36.299Z]         "IsDisabled": null
+[2026-11-26T19:12:36.299Z]       },
+[2026-11-26T19:12:36.299Z]       "Arguments": {
+[2026-11-26T19:12:36.299Z]         "ExecutablePath": "node",
+[2026-11-26T19:12:36.299Z]         "ExecutableArguments": [],
+[2026-11-26T19:12:36.299Z]         "WorkerPath": "C:\\Users\\mirellasantana\\rota-vital-serverless\\node_modules\\azure-functions-core-tools\\bin\\workers\\node\\dist/src/nodejsWorker.js",
+[2026-11-26T19:12:36.299Z]         "WorkerArguments": []
+[2026-11-26T19:12:36.299Z]       },
+[2026-11-26T19:12:36.299Z]       "CountOptions": {
+[2026-11-26T19:12:36.299Z]         "SetProcessCountToNumberOfCpuCores": false,
+[2026-11-26T19:12:36.299Z]         "ProcessCount": 1,
+[2026-11-26T19:12:36.299Z]         "MaxProcessCount": 10,
+[2026-11-26T19:12:36.300Z]         "ProcessStartupInterval": "00:00:10",
+[2026-11-26T19:12:36.300Z]         "ProcessStartupTimeout": "00:01:00",
+[2026-11-26T19:12:36.300Z]         "InitializationTimeout": "00:02:00",
+[2026-11-26T19:12:36.300Z]         "EnvironmentReloadTimeout": "00:02:00",
+[2026-11-26T19:12:36.300Z]         "ProcessRestartInterval": "00:00:10",
+[2026-11-26T19:12:36.300Z]         "ProcessShutdownTimeout": "00:00:10"
+[2026-11-26T19:12:36.300Z]       }
+[2026-11-26T19:12:36.300Z]     }
+[2026-11-26T19:12:36.300Z]   ]
+[2026-11-26T19:12:36.300Z] }
+[2026-11-26T19:12:36.300Z] ScriptJobHostOptions
+[2026-11-26T19:12:36.300Z] {
+[2026-11-26T19:12:36.300Z]   "FileWatchingEnabled": true,
+[2026-11-26T19:12:36.301Z]   "FileLoggingMode": "Never",
+[2026-11-26T19:12:36.301Z]   "FunctionTimeout": null,
+[2026-11-26T19:12:36.301Z]   "TelemetryMode": "ApplicationInsights"
+[2026-11-26T19:12:36.301Z] }
+[2026-11-26T19:12:39.189Z] Executing HTTP request: {
+[2026-11-26T19:12:39.190Z]   "requestId": "7589999a-2d2d-448a-8c5e-c2e2c555a087",
+[2026-11-26T19:12:39.190Z]   "method": "POST",
+[2026-11-26T19:12:39.190Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:39.190Z]   "uri": "/api/guias"
+[2026-11-26T19:12:39.190Z] }
+[2026-11-26T19:12:39.193Z] ResponseCompressionOptions
+[2026-11-26T19:12:39.193Z] {
+[2026-11-26T19:12:39.194Z]   "ResponseCompressionOptions": false
+[2026-11-26T19:12:39.194Z] }
+[2026-11-26T19:12:39.399Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=7d7a0f5f-7fdc-44df-bb58-af063d3afda0)
+[2026-11-26T19:12:39.551Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId 7d7a0f5f-7fdc-44df-bb58-af063d3afda0
+[2026-11-26T19:12:39.559Z] invocação 1 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:39.590Z] Executed 'Functions.guias' (Succeeded, Id=7d7a0f5f-7fdc-44df-bb58-af063d3afda0, Duration=237ms)
+[2026-11-26T19:12:39.611Z] Executed HTTP request: {
+[2026-11-26T19:12:39.611Z]   "requestId": "7589999a-2d2d-448a-8c5e-c2e2c555a087",
+[2026-11-26T19:12:39.611Z]   "identities": "",
+[2026-11-26T19:12:39.611Z]   "status": "201",
+[2026-11-26T19:12:39.611Z]   "duration": "421"
+[2026-11-26T19:12:39.611Z] }
+[2026-11-26T19:12:39.926Z] Executing HTTP request: {
+[2026-11-26T19:12:39.926Z]   "requestId": "b53071bf-a980-4ddf-8f3b-0a86c688df49",
+[2026-11-26T19:12:39.927Z]   "method": "POST",
+[2026-11-26T19:12:39.927Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:39.927Z]   "uri": "/api/guias"
+[2026-11-26T19:12:39.927Z] }
+[2026-11-26T19:12:39.930Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=5db9df92-0ca3-4fdb-ab7e-9dddc42821c2)
+[2026-11-26T19:12:39.935Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId 5db9df92-0ca3-4fdb-ab7e-9dddc42821c2
+[2026-11-26T19:12:39.935Z] invocação 2 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:39.936Z] Executed 'Functions.guias' (Succeeded, Id=5db9df92-0ca3-4fdb-ab7e-9dddc42821c2, Duration=7ms)
+[2026-11-26T19:12:39.938Z] Executed HTTP request: {
+[2026-11-26T19:12:39.938Z]   "requestId": "b53071bf-a980-4ddf-8f3b-0a86c688df49",
+[2026-11-26T19:12:39.938Z]   "identities": "",
+[2026-11-26T19:12:39.938Z]   "status": "201",
+[2026-11-26T19:12:39.938Z]   "duration": "11"
+[2026-11-26T19:12:39.938Z] }
+[2026-11-26T19:12:40.268Z] Executing HTTP request: {
+[2026-11-26T19:12:40.269Z]   "requestId": "5ae62cba-9ec5-41bf-a858-538e7023f430",
+[2026-11-26T19:12:40.269Z]   "method": "POST",
+[2026-11-26T19:12:40.269Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:40.269Z]   "uri": "/api/guias"
+[2026-11-26T19:12:40.269Z] }
+[2026-11-26T19:12:40.270Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=561e0927-2192-46d4-b595-074c27f450bb)
+[2026-11-26T19:12:40.274Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId 561e0927-2192-46d4-b595-074c27f450bb
+[2026-11-26T19:12:40.274Z] invocação 3 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.275Z] Executed 'Functions.guias' (Succeeded, Id=561e0927-2192-46d4-b595-074c27f450bb, Duration=4ms)
+[2026-11-26T19:12:40.275Z] Executed HTTP request: {
+[2026-11-26T19:12:40.275Z]   "requestId": "5ae62cba-9ec5-41bf-a858-538e7023f430",
+[2026-11-26T19:12:40.275Z]   "identities": "",
+[2026-11-26T19:12:40.275Z]   "status": "201",
+[2026-11-26T19:12:40.275Z]   "duration": "6"
+[2026-11-26T19:12:40.276Z] }
+[2026-11-26T19:12:40.548Z] Executing HTTP request: {
+[2026-11-26T19:12:40.548Z]   "requestId": "5e7cd084-91eb-4344-bd91-3a72d5aeacbe",
+[2026-11-26T19:12:40.548Z]   "method": "POST",
+[2026-11-26T19:12:40.548Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:40.548Z]   "uri": "/api/guias"
+[2026-11-26T19:12:40.548Z] }
+[2026-11-26T19:12:40.549Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=df8f712a-e60a-4111-8e8f-d87b694b1ef9)
+[2026-11-26T19:12:40.554Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId df8f712a-e60a-4111-8e8f-d87b694b1ef9
+[2026-11-26T19:12:40.555Z] invocação 4 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.555Z] Executed 'Functions.guias' (Succeeded, Id=df8f712a-e60a-4111-8e8f-d87b694b1ef9, Duration=6ms)
+[2026-11-26T19:12:40.556Z] Executed HTTP request: {
+[2026-11-26T19:12:40.556Z]   "requestId": "5e7cd084-91eb-4344-bd91-3a72d5aeacbe",
+[2026-11-26T19:12:40.556Z]   "identities": "",
+[2026-11-26T19:12:40.556Z]   "status": "201",
+[2026-11-26T19:12:40.556Z]   "duration": "7"
+[2026-11-26T19:12:40.556Z] }
+[2026-11-26T19:12:40.829Z] Executing HTTP request: {
+[2026-11-26T19:12:40.829Z]   "requestId": "96021208-10c1-49eb-b828-8941af6c6488",
+[2026-11-26T19:12:40.829Z]   "method": "POST",
+[2026-11-26T19:12:40.829Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:40.829Z]   "uri": "/api/guias"
+[2026-11-26T19:12:40.829Z] }
+[2026-11-26T19:12:40.830Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=f24f92b4-1356-48ea-be35-a313b2bf1519)
+[2026-11-26T19:12:40.837Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId f24f92b4-1356-48ea-be35-a313b2bf1519
+[2026-11-26T19:12:40.837Z] invocação 5 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:40.838Z] Executed 'Functions.guias' (Succeeded, Id=f24f92b4-1356-48ea-be35-a313b2bf1519, Duration=8ms)
+[2026-11-26T19:12:40.839Z] Executed HTTP request: {
+[2026-11-26T19:12:40.839Z]   "requestId": "96021208-10c1-49eb-b828-8941af6c6488",
+[2026-11-26T19:12:40.839Z]   "identities": "",
+[2026-11-26T19:12:40.839Z]   "status": "201",
+[2026-11-26T19:12:40.839Z]   "duration": "9"
+[2026-11-26T19:12:40.839Z] }
+[2026-11-26T19:12:41.106Z] Executing HTTP request: {
+[2026-11-26T19:12:41.106Z]   "requestId": "f5e35bb6-bbbc-488d-81ff-e59f90b3e626",
+[2026-11-26T19:12:41.106Z]   "method": "POST",
+[2026-11-26T19:12:41.106Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:41.106Z]   "uri": "/api/guias"
+[2026-11-26T19:12:41.106Z] }
+[2026-11-26T19:12:41.107Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=1c2dd158-38fb-4c14-b88d-2f8e7bb81fb6)
+[2026-11-26T19:12:41.112Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId 1c2dd158-38fb-4c14-b88d-2f8e7bb81fb6
+[2026-11-26T19:12:41.112Z] invocação 6 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 400
+[2026-11-26T19:12:41.113Z] Executed 'Functions.guias' (Succeeded, Id=1c2dd158-38fb-4c14-b88d-2f8e7bb81fb6, Duration=5ms)
+[2026-11-26T19:12:41.113Z] Executed HTTP request: {
+[2026-11-26T19:12:41.113Z]   "requestId": "f5e35bb6-bbbc-488d-81ff-e59f90b3e626",
+[2026-11-26T19:12:41.113Z]   "identities": "",
+[2026-11-26T19:12:41.113Z]   "status": "400",
+[2026-11-26T19:12:41.113Z]   "duration": "7"
+[2026-11-26T19:12:41.113Z] }
+[2026-11-26T19:12:41.128Z] Host lock lease acquired by instance ID '0000000000000000000000009927815B'.
+[2026-11-26T19:12:41.355Z] [Tag=''] Process reporting unhealthy: Unhealthy. Health check entries are {"azure.functions.web_host.lifecycle":{"status":"Healthy","description":null},"azure.functions.script_host.lifecycle":{"status":"Healthy","description":null},"azure.functions.webjobs.storage":{"status":"Unhealthy","description":"Unable to create client for AzureWebJobsStorage"}}
+[2026-11-26T19:12:41.433Z] Executing HTTP request: {
+[2026-11-26T19:12:41.433Z]   "requestId": "c62c1f1a-efd2-4b9f-9bb5-6f5cb5af9beb",
+[2026-11-26T19:12:41.433Z]   "method": "POST",
+[2026-11-26T19:12:41.433Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:12:41.433Z]   "uri": "/api/guias"
+[2026-11-26T19:12:41.433Z] }
+[2026-11-26T19:12:41.435Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=a99c0157-9771-47b1-a2fc-aa7e2d57fd03)
+[2026-11-26T19:12:41.440Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId a99c0157-9771-47b1-a2fc-aa7e2d57fd03
+[2026-11-26T19:12:41.440Z] demorar=true: dormindo 5 s (o functionTimeout do host.json é 3 s)
+[2026-11-26T19:12:44.442Z] Timeout value of 00:00:03 exceeded by function 'Functions.guias' (Id: 'a99c0157-9771-47b1-a2fc-aa7e2d57fd03'). Initiating cancellation.
+[2026-11-26T19:12:44.452Z] Executed 'Functions.guias' (Failed, Id=a99c0157-9771-47b1-a2fc-aa7e2d57fd03, Duration=3016ms)
+[2026-11-26T19:12:44.452Z] Microsoft.Azure.WebJobs.Host: Timeout value of 00:00:03 was exceeded by function: Functions.guias.
+[2026-11-26T19:12:46.444Z] invocação 7 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:12:46.447Z] Executed HTTP request: {
+[2026-11-26T19:12:46.447Z]   "requestId": "c62c1f1a-efd2-4b9f-9bb5-6f5cb5af9beb",
+[2026-11-26T19:12:46.447Z]   "identities": "",
+[2026-11-26T19:12:46.447Z]   "status": "500",
+[2026-11-26T19:12:46.447Z]   "duration": "5014"
+[2026-11-26T19:12:46.447Z] }
+[2026-11-26T19:13:01.833Z] Executing HTTP request: {
+[2026-11-26T19:13:01.833Z]   "requestId": "4893c147-a078-4d6b-b564-5168cca0d760",
+[2026-11-26T19:13:01.833Z]   "method": "POST",
+[2026-11-26T19:13:01.833Z]   "userAgent": "curl/8.14.1",
+[2026-11-26T19:13:01.833Z]   "uri": "/api/guias"
+[2026-11-26T19:13:01.833Z] }
+[2026-11-26T19:13:01.835Z] Executing 'Functions.guias' (Reason='This function was programmatically called via the host APIs.', Id=550345a7-9075-4f9c-9c28-0d6e4a478053)
+[2026-11-26T19:13:01.844Z] Worker 7c261a4d-a09c-4712-8b43-95acdd33d862 received FunctionInvocationRequest with invocationId 550345a7-9075-4f9c-9c28-0d6e4a478053
+[2026-11-26T19:13:01.844Z] invocação 8 neste ambiente (inicializado em 2026-11-26T19:12:35.563Z) -> 201
+[2026-11-26T19:13:01.845Z] Executed 'Functions.guias' (Succeeded, Id=550345a7-9075-4f9c-9c28-0d6e4a478053, Duration=10ms)
+[2026-11-26T19:13:01.846Z] Executed HTTP request: {
+[2026-11-26T19:13:01.846Z]   "requestId": "4893c147-a078-4d6b-b564-5168cca0d760",
+[2026-11-26T19:13:01.846Z]   "identities": "",
+[2026-11-26T19:13:01.846Z]   "status": "201",
+[2026-11-26T19:13:01.846Z]   "duration": "13"
+[2026-11-26T19:13:01.846Z] }

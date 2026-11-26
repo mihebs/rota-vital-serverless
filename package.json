@@ -1,0 +1,16 @@
+{
+  "name": "rota-vital-serverless",
+  "version": "1.0.0",
+  "description": "Função serverless (Azure Functions, execução local) que gera a guia de transporte de uma requisição do Rota Vital",
+  "main": "src/functions/*.js",
+  "scripts": {
+    "start": "func start",
+    "test": "node --test test/guia.test.js"
+  },
+  "dependencies": {
+    "@azure/functions": "^4.5.0"
+  },
+  "devDependencies": {
+    "azure-functions-core-tools": "^4.0.6610"
+  }
+}

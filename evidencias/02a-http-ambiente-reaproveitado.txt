@@ -1,0 +1,19 @@
+# Experimento 2a - 3 chamadas HTTP no MESMO ambiente (processo reaproveitado, como --warm-containers)
+# 26/11/2026 16:12:39
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":3,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.223092s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":4,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.218750s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":5,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.224735s
+
+# Validacao: pedido sem requisicaoId
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"hospital":"H-Caruaru"}'
+{"erro":"requisicaoId obrigatório","ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 400] tempo total: 0.215137s

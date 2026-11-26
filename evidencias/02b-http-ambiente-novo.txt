@@ -1,0 +1,14 @@
+# Experimento 2b - host PARADO e INICIADO de novo = ambiente novo (sem reaproveitamento)
+# 26/11/2026 16:13:18
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":1,"ambienteInicializadoEm":"2026-11-26T19:13:14.234Z"}
+[HTTP 201] tempo total: 0.605862s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":2,"ambienteInicializadoEm":"2026-11-26T19:13:14.234Z"}
+[HTTP 201] tempo total: 0.216456s
+
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-002","hospital":"H-Caruaru"}'
+{"guia":"G-R-002","hospital":"H-Caruaru","bolsas":[],"invocacaoNesteAmbiente":3,"ambienteInicializadoEm":"2026-11-26T19:13:14.234Z"}
+[HTTP 201] tempo total: 0.220842s

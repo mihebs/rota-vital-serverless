@@ -1,0 +1,10 @@
+# Experimento 3a - demorar=true com functionTimeout = 00:00:03 (host.json); a funcao dorme 5 s
+# 26/11/2026 16:12:41
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-003","demorar":true}'
+
+[HTTP 500] tempo total: 5.239209s
+
+# Nova chamada normal 15 s depois do timeout (para ver se o ambiente foi recriado ou reaproveitado):
+$ curl -X POST http://localhost:7071/api/guias -H 'Content-Type: application/json' -d '{"requisicaoId":"R-004","hospital":"H-Recife"}'
+{"guia":"G-R-004","hospital":"H-Recife","bolsas":[],"invocacaoNesteAmbiente":8,"ambienteInicializadoEm":"2026-11-26T19:12:35.563Z"}
+[HTTP 201] tempo total: 0.232455s
